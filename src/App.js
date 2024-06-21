@@ -1,4 +1,4 @@
-
+import { Routes,Route,Link } from "react-router-dom";
 import Login from "./login";
 import Users from "./Users";
 export const Introduction=()=>{
@@ -11,8 +11,16 @@ export const Introduction=()=>{
 const App =()=>{
   return (
     <div>
-      <Login/>
-      <Users/>
+      <h1>Click Me</h1>
+      <nav>
+        <Link to={"/login"}>Login</Link>
+      </nav>
+      <Routes>
+        <Route path = '/login' element={<Login/>}></Route>
+        <Route path = '/users' element={<Users/>}></Route>
+      </Routes>
+      {/* <Login/>
+      <Users/> */}
       
     </div>
   )
